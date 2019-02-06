@@ -30,7 +30,7 @@ I stedet for at bygge en stor monolitisk applikation, er ideen at splitte applik
 En service implementer typiske en feature eller funktionalitet. Det kan f.eks. være ordrebehandling, kundehåndtering etc. Hver service har sin egen arkitektur bestående af foretningslogik. Nogen mikroservices har en API, der kan blive brugt af andre mikroservices eller af applikationsens klienter. Andre mikroservices implementer måske web UI. Ved runtime er hver instans af applikationen en cloud vm eller docker container(er hurtigere).  
 
 Eksemple på opdeling af et system i mikroservices.  
-[https://github.com/BoMarconiHenriksen/microservices/blob/master/img/Richardson-microservices-part1-2_microservices-architecture.png]  
+["https://github.com/BoMarconiHenriksen/microservices/blob/master/img/Richardson-microservices-part1-2_microservices-architecture.png"]  
 
 Hvert område af applikationen har nu sin egen mikroservice. Derudover er webapplikationen delt op i flere simplere web applikationer. Dette gør det lettere at deploye specifikke web UI til forskellige brugere og devices.  
 
