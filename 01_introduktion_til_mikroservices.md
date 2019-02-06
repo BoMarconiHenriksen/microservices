@@ -45,14 +45,14 @@ En gateway er ansvarlig for load balancing, caching, adgangskontrol, API meterin
 Bogen The Art of Scaling http://theartofscalability.com/ beskriver en skaleringsmodel, der hedder the scale cube. Den beskriver 3 dimention i skalering.  
 
 Y skaler ved at opdele. X skaler ved at køre flere kopier af samme instance bag en load balancer, og z skalering, hvor f.eks. primary key til en kunde bruges til at lede requestet hen til en bestemt server. https://microservices.io/articles/scalecube.html   
-https://github.com/BoMarconiHenriksen/microservices/blob/master/img/DecomposingApplications.021.jpg  
+![alt text](https://github.com/BoMarconiHenriksen/microservices/blob/master/img/DecomposingApplications.021.jpg)  
 
 Typisk bruges de 3 skaleringsmetoder sammen. Y skalering opdeler applikationen i mikroservices. Ved runtime kører x skalering flere instanser af hver service bag en load balancer. Nogen applikationer bruger også z skalering til at partition the service. En trip management service med docker containere kunne se sådan ud.  
-https://github.com/BoMarconiHenriksen/microservices/blob/master/img/Richardson-microservices-part1-4_dockerized-application.png  
+![alt text](https://github.com/BoMarconiHenriksen/microservices/blob/master/img/Richardson-microservices-part1-4_dockerized-application.png)  
 
 ##### Databaser
 En mikroservice arkitektur påvirker relationen mellem en applikation og en database. I stedet for at dele et database schema har hver mikroservice sin egen database schema. Det kan resultere i at data nogen data kan blive dublikeret. På den anden side er det essientielt at have en database per mikroservice, da det sikrer en lav kopling.  
-https://github.com/BoMarconiHenriksen/microservices/blob/master/img/intro-microservices.png  
+![alt text](https://github.com/BoMarconiHenriksen/microservices/blob/master/img/intro-microservices.png)  
 
 Hver service har sin egen database. Derudover er det muligt at bruge den database, der er best egnet til den specifikke mikroservice.  
 
